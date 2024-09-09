@@ -1,0 +1,32 @@
+### Ottenere tutti gli autori
+GET http://localhost:5001/authors
+
+### Ottenere un autore specifico
+GET http://localhost:5001/authors/author-id
+
+### Creare un nuovo autore
+POST http://localhost:5001/authors
+Content-Type: application/json
+
+{
+  "nome": "Mario",
+  "cognome": "Rossi",
+  "email": "mario.rossi@example.com",
+  "dataDiNascita": "1985-10-10",
+  "avatar": "https://example.com/avatar.png"
+}
+
+### Aggiornare un autore esistente
+PUT http://localhost:5001/authors/author-id
+Content-Type: application/json
+
+{
+  "nome": "Luigi",
+  "cognome": "Verdi",
+  "email": "luigi.verdi@example.com",
+  "dataDiNascita": "1988-05-05",
+  "avatar": "https://example.com/avatar2.png"
+}
+
+### Cancellare un autore
+DELETE http://localhost:5001/authors/author-id

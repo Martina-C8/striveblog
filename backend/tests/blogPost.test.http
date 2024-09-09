@@ -1,0 +1,53 @@
+### Ottieni una lista di blog post con paginazione
+GET http://localhost:5001/blogPosts?page=1&limit=10
+Accept: application/json
+
+###
+
+### Ottieni un singolo blog post
+GET http://localhost:5001/blogPosts/66d9959d61c5963a4e1192f3
+Accept: application/json
+
+###
+
+### Crea un nuovo blog post
+POST http://localhost:5001/blogPosts
+Content-Type: application/json
+
+{
+  "category": "Post numero 2",
+  "title": "Post numero 2",
+  "cover": "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725667200&semt=ais_hybrid",
+  "readtime": {
+    "value": 5,
+    "unit": "min"
+  },
+  "author": "martina@outlook.com",
+  "content": "<p>Un lorem ipsum andrà benissimo</p>"
+}
+
+###
+
+### Modifica un blog post esistente
+PUT http://localhost:5001/blogPosts/66d9928556e7c8564f5fc59c
+Content-Type: application/json
+
+{
+  "category": "Programmazione",
+  "title": "Aggiornamento a Node.js",
+  "cover": "https://example.com/new-image.jpg",
+  "readtime": {
+    "value": 10,
+    "unit": "min"
+  },
+  "author": "autore@example.com",
+  "content": "<p>Nuovo contenuto del post...</p>"
+}
+
+###
+
+### Cancella un blog post
+DELETE http://localhost:5001/blogPosts/66d9b7a17c33a3c10c5c0af4
+Accept: application/json
+
+###
